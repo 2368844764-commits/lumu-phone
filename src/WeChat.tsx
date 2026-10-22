@@ -3,7 +3,7 @@ import {Search,Plus,MessageCircle,Contact,Compass,UserRound,ChevronLeft,MoreHori
 import './WeChat.css';
 type Person={id:string;name:string;remark?:string;avatar?:string};
 const people:Person[]=[{id:'mu_zhicheng',name:'穆祉丞'},{id:'friend',name:'联系人'}];
-type Message={id:string;personId:string;sender:string;type:string;content:string;time?:string};
+type Message={id:string;personId:string;sender:string;type:string;content:string;time?:string;unread?:boolean};
 export default function WeChat(){const [tab,setTab]=useState('微信');const [chat,setChat]=useState<string|null>(null);const [profile,setProfile]=useState<string|null>(null);const [call,setCall]=useState<string|null>(null);const [seconds,setSeconds]=useState(0);const [draft,setDraft]=useState('');const [sent,setSent]=useState<Message[]>([]);const [search,setSearch]=useState('');
 const [store]=useState(()=>{try{const d=JSON.parse(localStorage.getItem('lumu-studio-draft-v1')||'{}');return d}catch{return {}}});
 const contacts:Person[]=Array.isArray(store.people)?store.people.filter((p:Person)=>p.id!=='wang_lujie'):people;
