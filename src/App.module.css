@@ -7,3 +7,6 @@
 
 /* Native-style full-screen app: no home wallpaper visible above opened app. */
 .appPage{inset:0;border-radius:0;background:#ededed;padding-top:59px}.appPage:has(.wx){background:#ededed}.appPage:has(.wx) .appBody{background:#ededed}.phone:has(.appPage) .status{color:#151515;pointer-events:none}.phone:has(.appPage) .homeIndicator{background:#222}
+
+/* Home screen editor */
+.homeToolbar{height:29px;display:flex;justify-content:flex-end;gap:8px}.homeToolbar button{background:#ffffff55;color:white;border-radius:16px;padding:5px 12px;font-size:12px;backdrop-filter:blur(8px)}.jiggle{animation:iconJiggle .19s ease-in-out infinite alternate;position:relative}.removeIcon{position:absolute;z-index:4;top:-9px;left:0;background:#d7d7da;color:#222;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:20px;line-height:1;box-shadow:0 1px 4px #0004}@keyframes iconJiggle{from{transform:rotate(-1.4deg)}to{transform:rotate(1.4deg)}}.pageDots button{width:7px;height:7px;border-radius:50%;background:#ffffff88;padding:0}.pageDots button.activeDot{background:white}.grid .appTile{touch-action:pan-y}
