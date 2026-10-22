@@ -10,12 +10,20 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: npm install
+      - name: Install dependencies with bounded retries
+        run: npm install --no-audit --no-fund --prefer-online --loglevel=verbose
+        timeout-minutes: 6
+        env:
+          npm_config_fetch_retries: '2'
+          npm_config_fetch_retry_mintimeout: '1000'
+          npm_config_fetch_retry_maxtimeout: '10000'
+          npm_config_fetch_timeout: '30000'
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
