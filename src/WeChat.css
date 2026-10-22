@@ -3,3 +3,27 @@
 .wx{background:#ededed;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",sans-serif}.wx-top{background:#ededed;height:55px;padding:12px 16px}.wx-top h1{font-size:21px;font-weight:650}.wx-search{background:#fff;border-radius:9px;margin:8px 12px 10px;min-height:36px}.wx-person{background:#fff;min-height:72px;padding:11px 15px}.wx-person:active,.wx-discover:active{background:#f1f1f1}.wx-person-body strong{font-weight:550;font-size:16px}.wx-avatar{background:#7c9d91;border-radius:6px}.wx-tabs{background:#f8f8f8;padding:9px 0 11px}.wx-tabs button{gap:5px}.wx-tabs button.active{color:#07b65a}.wx-header{background:#ededed;height:54px}.wx-chat-scroll{background:#ededed}.wx-bubble{border-radius:6px;font-size:15px;line-height:1.55;box-shadow:0 1px 1px #00000009}.wx-msg.mine .wx-bubble{background:#95ec69}.wx-compose{border-top:1px solid #ddd;background:#f6f6f6;padding:9px 8px}.wx-compose input{min-height:36px}.wx-moments{background:#fff}.wx-moment b{color:#526a91}.wx-moment p{font-size:15px;line-height:1.55}.wx-cover{height:165px;background:linear-gradient(125deg,#758da4,#d8a5b8)}
 
 .wx-person.wx-pinned{background:#f4f4f4}.wx-person.wx-pinned:active{background:#e9e9e9}
+
+/* WeChat V1.1: genuine full-height nested screens and touch targets */
+.wx{width:100%;height:100%;min-height:0;overflow:hidden;display:flex;flex-direction:column;background:#ededed;color:#191919;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",sans-serif}
+.wx button{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.wx-top{flex:0 0 55px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;background:#ededed}
+.wx-top h1{font-size:20px;font-weight:600}.wx-top-actions{display:flex;gap:13px;align-items:center}.wx-top-actions button{display:grid;place-items:center;padding:5px}
+.wx-search{flex:0 0 38px;margin:4px 12px 9px;padding:6px 9px}.wx-list{min-height:0;flex:1;overflow-y:auto;overscroll-behavior:contain}
+.wx-person{padding:12px 15px;min-height:73px;touch-action:pan-y}.wx-person-body strong{font-weight:550}.wx-person time{min-width:40px;text-align:right;font-size:10px}
+.wx-avatar{overflow:hidden}.wx-avatar img{width:100%;height:100%;object-fit:cover}
+.wx-tabs{flex:0 0 60px;padding:6px 0 max(7px,env(safe-area-inset-bottom));align-items:center;justify-content:space-around}
+.wx-tabs button{flex:1;min-width:0}.wx-tabs small{font-size:10px}
+.wx-header{flex:0 0 52px;padding:0 11px}.wx-header button{min-width:60px;gap:0;padding:6px 0}.wx-header button:last-child{justify-content:flex-end}.wx-header strong{font-size:17px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wx-chat-scroll{min-height:0;flex:1;overflow-y:auto;overscroll-behavior:contain;padding:12px 12px 24px}
+.wx-compose{flex:0 0 auto;display:flex;align-items:center;gap:6px;padding:8px 9px max(11px,env(safe-area-inset-bottom))}
+.wx-compose button{min-width:26px}.wx-compose input{min-height:38px;padding:8px 9px;font-size:16px}.wx-compose .wx-send:disabled{opacity:.4}
+.wx-bubble{position:relative}.wx-msg-menu{position:absolute;bottom:calc(100% + 7px);left:0;display:flex;gap:2px;z-index:6;background:#333;color:#fff;padding:3px;border-radius:8px;box-shadow:0 5px 20px #0004;white-space:nowrap}.wx-msg-menu button{display:flex;align-items:center;gap:3px;padding:8px;font-size:12px}
+.wx-typing{padding:2px 40px;color:#888;font-size:12px}
+.wx-context{position:sticky;bottom:5px;z-index:6;background:white;box-shadow:0 -4px 19px #0002;padding:8px;display:flex;justify-content:space-around;gap:4px}.wx-context button{display:flex;align-items:center;gap:5px;font-size:13px;padding:10px 4px}
+.wx-extras{flex:0 0 auto;background:#f6f6f6;display:flex;justify-content:space-around;padding:14px 8px 20px;border-top:1px solid #ddd}.wx-extras button,.wx-extras label{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:11px;cursor:pointer}.wx-extras input{display:none}
+.wx-moments{min-height:0;flex:1;overflow-y:auto;overscroll-behavior:contain}.wx-cover{flex:0 0 auto;height:185px}.wx-moment{align-items:flex-start}.wx-moment-content{flex:1;min-width:0}.wx-moment-content>img{max-width:min(240px,100%);max-height:260px;object-fit:cover;border-radius:4px}.wx-moment-actions{display:flex;align-items:center;gap:13px;margin-top:9px;color:#66738b}.wx-moment-actions small{margin-right:auto}.wx-moment-actions button{display:flex;align-items:center;gap:3px;font-size:12px}.wx-comment{background:#f3f3f3;padding:7px;border-radius:3px;font-size:13px!important}
+.wx-comment-form{display:flex;gap:5px;margin-top:8px}.wx-comment-form input{min-width:0;flex:1;padding:8px;border:1px solid #ddd;border-radius:6px}.wx-comment-form button,.wx-moment-compose button{padding:6px 12px;background:#07b65a;color:white;border-radius:5px}
+.wx-moment-compose{padding:12px;background:white;display:flex;flex-direction:column;gap:8px}.wx-moment-compose textarea{min-height:65px;padding:9px;border:1px solid #eee}
+.wx-lightbox{position:absolute;inset:0;background:#000e;z-index:12;display:grid;place-items:center}.wx-lightbox img{max-width:95%;max-height:85%;object-fit:contain}.wx-lightbox button{position:absolute;top:10px;right:16px;color:white;font-size:34px}
+.wx-profile{overflow-y:auto;min-height:0}.wx-empty{line-height:1.6}
