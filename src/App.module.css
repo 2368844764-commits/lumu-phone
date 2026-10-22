@@ -35,3 +35,24 @@
 .cameraControls .shutter{background:white;border:4px solid #aaa;border-radius:50%;height:66px;width:66px}
 .cameraApp .hint{color:#b6b6b6;text-align:center}
 @media(max-height:700px){.home .grid{row-gap:7px}.home .icon{width:clamp(40px,12vw,49px);height:clamp(40px,12vw,49px)}}
+
+/* Passcode entry matching the supplied iPhone reference.
+   Lock wallpaper is controlled separately: do not replace the image. */
+.pass{position:relative;height:calc(100% - 59px);min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:0 24px max(36px,env(safe-area-inset-bottom));background:#11111112;backdrop-filter:none;-webkit-backdrop-filter:none;color:white}
+.passHeader{position:relative;flex:0 0 auto;width:100%;padding-top:clamp(76px,18vh,154px);display:flex;flex-direction:column;align-items:center;text-shadow:0 1px 5px #0006}
+.passTitle{font-size:clamp(21px,5.6vw,26px);font-weight:450;letter-spacing:2px;white-space:nowrap}
+.dots{display:flex;justify-content:center;gap:clamp(14px,4.4vw,24px);margin:19px 0 0}
+.dots i{width:12px;height:12px;border:1.5px solid white;border-radius:50%;background:transparent;box-shadow:0 1px 3px #0005}
+.dots .filled{background:white}
+.passDelete{position:absolute;top:calc(clamp(76px,18vh,154px) + 60px);right:0;color:white;background:#0004!important;border-radius:50%;width:30px;height:30px;display:grid;place-items:center}
+.error{position:relative;top:auto;margin-top:12px;color:#ffe0e0;background:#82191960;padding:4px 10px;border-radius:12px;font-size:12px}
+.pad{flex:0 1 auto;width:min(100%,320px);max-width:320px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:clamp(10px,4.5vw,22px);row-gap:clamp(12px,2.5vh,22px);justify-items:center;align-content:center;margin:0}
+.pad button{width:clamp(64px,20vw,83px);height:clamp(64px,20vw,83px);border-radius:50%;background:#ffffff2e;backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);border:1px solid #ffffff50!important;color:white;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;text-shadow:0 1px 4px #0005}
+.pad button:active{background:#ffffff71}
+.padNumber{font-size:clamp(33px,10vw,43px);font-weight:350;line-height:1.05}
+.padLetters{font-size:10px;min-height:12px;font-weight:650;letter-spacing:2px;line-height:1.2}
+.passFooter{flex:0 0 auto;width:100%;display:flex;justify-content:space-between;align-items:center;padding:0 14px}
+.passFooter button{padding:7px 3px;background:transparent;color:white;font-size:16px;letter-spacing:1px;text-shadow:0 1px 5px #0008}
+.emergencyPanel{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center}
+.emergencyPanel strong{font-size:26px}.emergencyPanel p{max-width:280px;font-size:14px}.emergencyPanel button{padding:12px 20px;color:white;background:#ffffff35;border-radius:20px}
+@media(max-height:700px){.pass{padding-bottom:24px}.passHeader{padding-top:clamp(36px,10vh,70px)}.pad{row-gap:8px}.pad button{width:clamp(54px,13vh,70px);height:clamp(54px,13vh,70px)}.padNumber{font-size:32px}.passDelete{top:calc(clamp(36px,10vh,70px) + 60px)}}
