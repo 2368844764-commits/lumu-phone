@@ -24,7 +24,10 @@ jobs:
           npm_config_fetch_retry_mintimeout: '1000'
           npm_config_fetch_retry_maxtimeout: '10000'
           npm_config_fetch_timeout: '30000'
-      - run: npm run build
+      - name: Build Vite site
+        run: npm run build
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
