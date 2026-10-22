@@ -28,15 +28,10 @@
 .home .icon{aspect-ratio:1;width:clamp(44px,15vw,59px);height:clamp(44px,15vw,59px);flex:0 0 auto}
 .home .dock{margin-top:4px;min-height:76px;align-items:center}
 .home .pageDots{margin-top:0;flex-shrink:0}
-.pass{position:relative;min-height:0}
-.passClose{position:absolute;top:12px;right:23px;width:35px;height:35px;border-radius:50%;color:white;background:#ffffff30!important;font-size:26px!important;line-height:1}
-.passActions{margin-top:auto;align-self:stretch;display:flex;justify-content:space-between;gap:20px;padding:8px 0 15px}
-.passActions button{background:none;color:white;padding:12px 10px;min-width:65px;font-size:16px}
-.passActions button:disabled{opacity:.4}
 .cameraApp{display:flex;flex-direction:column;align-items:center;gap:12px;min-height:100%;background:#151515;color:white;margin:-16px;padding:20px 12px}
 .cameraViewport{flex:1;width:100%;min-height:250px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:linear-gradient(145deg,#242732,#414654);color:#d4d7dd;border-radius:4px;font-size:14px}
 .cameraControls{display:flex;align-items:center;justify-content:space-around;width:100%;min-height:80px}
 .cameraControls button{display:grid;place-items:center;background:transparent;color:white;width:54px;height:54px;font-size:30px}
 .cameraControls .shutter{background:white;border:4px solid #aaa;border-radius:50%;height:66px;width:66px}
 .cameraApp .hint{color:#b6b6b6;text-align:center}
-@media(max-height:700px){.home .grid{row-gap:7px}.home .icon{width:clamp(40px,12vw,49px);height:clamp(40px,12vw,49px)}.passActions{padding-bottom:3px}}
+@media(max-height:700px){.home .grid{row-gap:7px}.home .icon{width:clamp(40px,12vw,49px);height:clamp(40px,12vw,49px)}}
