@@ -384,3 +384,29 @@
 .wx .wx-me-status{padding:0 11px 6px!important;margin-bottom:6px!important}
 .wx .wx-me-list .wx-me-row-1,.wx .wx-me-list .wx-me-row-6{margin-top:6px!important}
 .wx .wx-discover-list,.wx .wx-me-list{overflow-y:auto!important}
+
+/* Unified WeChat typography, reference-aligned header and owner identity. */
+.wx{--wx-font:13px;font-size:var(--wx-font)!important}
+.wx .wx-top{position:relative!important;display:flex!important;align-items:center!important;justify-content:center!important;height:43px!important;min-height:43px!important;flex:0 0 43px!important;padding:0 12px!important}
+.wx .wx-top h1{position:static!important;font-size:16px!important;font-weight:600!important;line-height:24px!important;margin:0!important}
+.wx .wx-top-actions{position:absolute!important;top:0!important;right:12px!important;bottom:0!important;left:auto!important;transform:none!important;display:flex!important;align-items:center!important;justify-content:flex-end!important;height:43px!important;gap:14px!important}
+.wx .wx-top-actions button{width:26px!important;height:30px!important;display:grid!important;place-items:center!important}
+.wx .wx-top-actions svg{width:20px!important;height:20px!important}
+.wx .wx-conversations .wx-person{height:58px!important;min-height:58px!important;gap:10px!important;padding:5px 11px!important}
+.wx .wx-conversations .wx-person .wx-avatar{width:40px!important;height:40px!important;flex-basis:40px!important}
+.wx .wx-conversations .wx-person-body strong{font-size:13px!important}
+.wx .wx-conversations .wx-person-body small{font-size:11px!important}
+.wx .wx-conversations .wx-person time{font-size:10px!important}
+.wx .wx-contact-shortcuts button{height:47px!important;min-height:47px!important;font-size:13px!important;padding:4px 12px!important;gap:10px!important}
+.wx .wx-contact-shortcuts .wx-shortcut-icon{width:34px!important;height:34px!important;flex-basis:34px!important;font-size:17px!important}
+.wx .wx-contacts .wx-person{height:47px!important;min-height:47px!important;padding:4px 12px!important;gap:10px!important}
+.wx .wx-contacts .wx-person .wx-avatar{width:35px!important;height:35px!important;flex-basis:35px!important}
+.wx .wx-contacts .wx-person>strong{font-size:13px!important}
+.wx .wx-letter{font-size:10px!important;height:19px!important;min-height:19px!important;padding:2px 12px!important}
+.wx .wx-discover-list button.wx-discover-row,.wx .wx-me-list button.wx-me-row{font-size:13px!important}
+.wx .wx-me-list .wx-me{box-sizing:border-box!important;display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;height:79px!important;min-height:79px!important;padding:10px 12px!important;gap:12px!important;overflow:hidden!important}
+.wx .wx-me-list .wx-me .wx-avatar{width:48px!important;height:48px!important;flex:0 0 48px!important;align-self:center!important}
+.wx .wx-me-list .wx-me-identity{display:flex!important;flex:1 1 auto!important;min-width:0!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:5px!important;text-align:left!important;margin:0!important;padding:0!important}
+.wx .wx-me-list .wx-me-identity b{display:block!important;font-size:15px!important;line-height:19px!important;margin:0!important}
+.wx .wx-me-list .wx-me-identity small{display:block!important;font-size:11px!important;line-height:15px!important;margin:0!important}
+.wx .wx-me-list .wx-me-arrow{display:block!important;position:static!important;flex:0 0 12px!important;margin-left:auto!important;align-self:center!important;line-height:1!important;font-size:20px!important}
