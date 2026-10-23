@@ -217,3 +217,16 @@
 .switcherCardTitle{font-size:16px;font-weight:600;padding:18px;background:#ededed;text-align:center}
 .switcherCardContent{flex:1;display:grid;place-items:center;color:#888;font-size:13px}
 .switcherHome{background:#ffffff30!important;color:white!important;padding:10px 24px;border-radius:24px}
+
+/* 2026-10 mobile layout correction: app content begins immediately below status */
+.phone:has(.appPage) .status{background:#ededed!important;color:#171717!important;text-shadow:none!important}
+.phone:has(.appPage) .appPage{top:59px!important;bottom:0!important}
+.phone:has(.appPage) .appBody,.phone:has(.appPage) .appBody .wx{height:100%!important;min-height:0!important}
+.phone:has(.home) .home{padding-top:8px!important;padding-bottom:12px!important;gap:0!important}
+.phone:has(.home) .home .grid{flex:1 1 auto!important;min-height:0!important;grid-template-rows:repeat(4,minmax(0,1fr))!important;grid-auto-rows:minmax(0,1fr)!important;row-gap:0!important;padding-top:8px!important;align-content:stretch!important;overflow:hidden!important}
+.phone:has(.home) .home .grid .appTile{height:auto!important;min-height:0!important;gap:5px!important;justify-content:flex-start!important}
+.phone:has(.home) .home .grid .appTile .icon{width:clamp(43px,14vw,60px)!important;height:clamp(43px,14vw,60px)!important;flex:0 0 auto!important;aspect-ratio:1}
+.phone:has(.home) .home .grid .appTile>span:last-child{font-size:clamp(10px,2.8vw,12px)!important;line-height:16px!important;height:16px!important;min-height:16px!important;overflow:hidden!important;text-overflow:ellipsis!important}
+.phone:has(.home) .home .dock{flex:0 0 auto!important;padding:8px 4px!important}
+.phone:has(.home) .home .spotlight,.phone:has(.home) .home .pageDots{flex:0 0 auto!important}
+@media(max-height:740px){.phone:has(.home) .home .grid .appTile .icon{width:clamp(38px,12vw,52px)!important;height:clamp(38px,12vw,52px)!important}.phone:has(.home) .home .grid{padding-top:4px!important}}
