@@ -247,3 +247,50 @@
 }
 .wx .wx-contact-shortcuts button{justify-content:flex-start!important;text-align:left!important}
 .wx .wx-me-list .wx-me{justify-content:flex-start!important;text-align:left!important}
+
+/* FIX: screenshot showed centered feature rows despite flex overrides.
+   Force explicit left-anchored grid tracks so global button styling cannot redistribute items. */
+.wx .wx-discover-list button.wx-discover-row,
+.wx .wx-me-list button.wx-me-row{
+ display:grid!important;
+ grid-template-columns:26px minmax(0,1fr) 12px!important;
+ justify-content:stretch!important;
+ justify-items:start!important;
+ align-items:center!important;
+ align-content:center!important;
+ column-gap:12px!important;
+ padding:0 15px!important;
+ text-align:left!important;
+ width:100%!important;
+ margin-left:0!important;
+ margin-right:0!important;
+}
+.wx .wx-discover-list button.wx-discover-row>.wx-discover-icon,
+.wx .wx-me-list button.wx-me-row>.wx-discover-icon{
+ grid-column:1!important;
+ width:26px!important;
+ min-width:26px!important;
+ margin:0!important;
+ padding:0!important;
+ justify-self:start!important;
+}
+.wx .wx-discover-list button.wx-discover-row>.wx-discover-icon+*,
+.wx .wx-me-list button.wx-me-row>.wx-discover-icon+*{
+ grid-column:2!important;
+ justify-self:start!important;
+ margin:0!important;
+ text-align:left!important;
+}
+.wx .wx-discover-list button.wx-discover-row>span:last-child,
+.wx .wx-me-list button.wx-me-row>span:last-child{
+ grid-column:3!important;
+ justify-self:end!important;
+ margin:0!important;
+}
+.wx .wx-contact-shortcuts>button{
+ display:flex!important;
+ justify-content:flex-start!important;
+ width:100%!important;
+ padding-left:15px!important;
+ text-align:left!important;
+}
