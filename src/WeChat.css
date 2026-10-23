@@ -201,3 +201,11 @@
 .wx .wx-person-body small{font-size:12px!important}
 .wx .wx-person time{font-size:10px!important}
 .wx .wx-discover-list .wx-discover-row,.wx .wx-me-list .wx-me-row{height:52px!important;min-height:52px!important;padding:0 15px!important;font-size:15px!important}
+
+/* Final density correction: no oversized header, and compact native iPhone status island */
+.wx .wx-top{height:44px!important;min-height:44px!important;flex:0 0 44px!important;padding:0 12px!important;margin:0!important}
+.wx .wx-top h1{font-size:17px!important;line-height:44px!important}
+.wx .wx-top .wx-top-actions{height:44px!important;top:0!important;bottom:auto!important}
+.wx .wx-top .wx-top-actions button{width:27px!important;height:32px!important}
+.wx .wx-search{min-height:32px!important;flex:0 0 32px!important;margin:5px 10px 7px!important;padding:4px 10px!important;border-radius:8px!important}
+.wx .wx-list{margin:0!important;padding-top:0!important}
