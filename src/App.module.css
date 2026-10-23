@@ -261,3 +261,19 @@
  text-overflow:ellipsis!important;
 }
 @media(max-height:690px){.phone:has(.home) .grid{grid-template-rows:repeat(4,80px)!important;grid-auto-rows:80px!important;row-gap:5px!important}.phone:has(.home) .grid .appTile .icon{width:46px!important;height:46px!important}}
+
+/* 2026-10-24 home vertical rhythm: match top inset to inter-row spacing.
+   The icon grid starts immediately below the iOS status bar, without a giant spacer. */
+.phone:has(.home) .home{padding-top:0!important}
+.phone:has(.home) .homeToolbar{display:none!important;flex:0 0 0!important;height:0!important;min-height:0!important}
+.phone:has(.home) .grid{
+ padding-top:12px!important;
+ grid-template-rows:repeat(4,92px)!important;
+ grid-auto-rows:92px!important;
+ row-gap:12px!important;
+ flex:1 1 auto!important;
+ align-content:start!important;
+}
+.phone:has(.home) .grid .appTile{gap:5px!important}
+.phone:has(.home) .grid .appTile .icon{width:clamp(48px,14vw,62px)!important;height:clamp(48px,14vw,62px)!important}
+@media(max-height:690px){.phone:has(.home) .grid{grid-template-rows:repeat(4,78px)!important;grid-auto-rows:78px!important;row-gap:8px!important;padding-top:8px!important}.phone:has(.home) .grid .appTile .icon{width:46px!important;height:46px!important}}
