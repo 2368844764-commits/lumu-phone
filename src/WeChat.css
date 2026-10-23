@@ -209,3 +209,19 @@
 .wx .wx-top .wx-top-actions button{width:27px!important;height:32px!important}
 .wx .wx-search{min-height:32px!important;flex:0 0 32px!important;margin:5px 10px 7px!important;padding:4px 10px!important;border-radius:8px!important}
 .wx .wx-list{margin:0!important;padding-top:0!important}
+
+/* Native iPhone WeChat density: no oversized header, no permanent search row */
+.wx{font-size:13px!important}
+.wx .wx-top{height:40px!important;min-height:40px!important;flex-basis:40px!important;padding:0 12px!important}
+.wx .wx-top h1{font-size:16px!important;line-height:40px!important}
+.wx .wx-top .wx-top-actions{height:40px!important;gap:10px!important}
+.wx .wx-top .wx-top-actions button{width:25px!important;height:29px!important}
+.wx .wx-search{flex:0 0 30px!important;min-height:30px!important;margin:3px 9px 5px!important;padding:3px 9px!important}
+.wx .wx-search input{font-size:12px!important}
+.wx .wx-person{min-height:59px!important;padding:6px 11px!important;gap:9px!important}
+.wx .wx-person .wx-avatar{width:42px!important;height:42px!important;flex-basis:42px!important}
+.wx .wx-person-body strong{font-size:14px!important}
+.wx .wx-person-body small{font-size:11px!important}
+.wx .wx-tabs{height:51px!important;min-height:51px!important;flex-basis:51px!important;padding:4px 0 2px!important}
+.wx .wx-tabs button{gap:2px!important}
+.wx .wx-tabs small{font-size:10px!important}
