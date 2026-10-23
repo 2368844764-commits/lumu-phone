@@ -192,56 +192,14 @@
 .batteryFill{width:100%;height:100%;border-radius:1.5px;background:currentColor}
 @media(max-width:500px){.phone:has(.home) .status{padding-top:max(16px,env(safe-area-inset-top))!important}}
 
-/* iPhone app viewport: one status bar, no duplicate page chrome */
-.phone:has(.appPage) .appPage{top:59px!important;inset-inline:0!important;bottom:0!important;border-radius:0!important}
-.phone:has(.appPage) .appBody{padding:0!important;overflow:hidden!important;min-height:0!important}
-.phone:has(.appPage) .appBody>div{height:100%;min-height:0}
-.phone:has(.appPage) .status{height:59px!important}
+
+/* Single authoritative fullscreen app layout; no duplicate top inset. */
+.phone:has(.appPage) .island{display:none!important}
+.phone:has(.appPage) .status{height:44px!important;padding:12px 22px 0!important;background:#ededed!important;color:#171717!important;text-shadow:none!important}
+.phone:has(.appPage) .appPage{position:absolute!important;inset:44px 0 0!important;top:44px!important;padding:0!important;margin:0!important;border-radius:0!important;min-height:0!important;background:#ededed!important}
+.phone:has(.appPage) .appBody{flex:1 1 auto!important;min-height:0!important;height:auto!important;padding:0!important;margin:0!important;overflow:hidden!important}
+.phone:has(.appPage) .appBody:has(:global(.wx)){display:flex!important;flex-direction:column!important}
+.phone:has(.appPage) .appBody :global(.wx){height:100%!important;min-height:0!important;flex:1 1 auto!important}
 .phone:has(.appPage) .homeIndicator{opacity:0!important;pointer-events:none!important}
 .phone:has(.home) .homeIndicator{opacity:0!important;pointer-events:none!important}
-.phone:has(.appPage) .island{width:112px;height:29px;top:9px}
-@media(max-width:500px){.phone:has(.appPage) .appPage{top:59px!important}}
-
-/* iPhone full-screen application: remove generic page padding and redundant chrome */
-.phone:has(.appPage) .appPage{inset:59px 0 0;border-radius:0;min-height:0;background:#ededed}
-.phone:has(.appPage) .appBody{padding:0;min-height:0;overflow:hidden}
-.phone:has(.appPage) .appBody:has(.wx){display:flex;flex-direction:column}
-.phone:has(.appPage) .appBody .wx{width:100%;min-width:0;min-height:0;flex:1}
-.phone:has(.appPage) .homeIndicator{opacity:0;pointer-events:none}
-.phone:has(.home) .homeIndicator{opacity:0;pointer-events:none}
 @media(max-width:600px){.stage{padding:0;min-height:100dvh;background:#000}.phone{width:100vw;height:100dvh;min-height:0;max-height:none;border:0;border-radius:0;box-shadow:none}.caption{display:none}}
-
-/* iOS-style app switcher: upward swipe and hold */
-.appSwitcher{position:absolute;inset:55px 0 0;z-index:20;background:rgba(33,38,57,.68);backdrop-filter:blur(18px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;color:white}
-.switcherCard{width:72%;height:56%;border-radius:22px;background:linear-gradient(155deg,#f9fafc,#e8e9ee);color:#222;box-shadow:0 16px 38px #0004;display:flex;flex-direction:column;overflow:hidden;transform:scale(.96)}
-.switcherCardTitle{font-size:16px;font-weight:600;padding:18px;background:#ededed;text-align:center}
-.switcherCardContent{flex:1;display:grid;place-items:center;color:#888;font-size:13px}
-.switcherHome{background:#ffffff30!important;color:white!important;padding:10px 24px;border-radius:24px}
-
-/* 2026-10 mobile layout correction: app content begins immediately below status */
-.phone:has(.appPage) .status{background:#ededed!important;color:#171717!important;text-shadow:none!important}
-.phone:has(.appPage) .appPage{top:59px!important;bottom:0!important}
-.phone:has(.appPage) .appBody,.phone:has(.appPage) .appBody .wx{height:100%!important;min-height:0!important}
-.phone:has(.home) .home{padding-top:8px!important;padding-bottom:12px!important;gap:0!important}
-.phone:has(.home) .home .grid{flex:1 1 auto!important;min-height:0!important;grid-template-rows:repeat(4,minmax(0,1fr))!important;grid-auto-rows:minmax(0,1fr)!important;row-gap:0!important;padding-top:8px!important;align-content:stretch!important;overflow:hidden!important}
-.phone:has(.home) .home .grid .appTile{height:auto!important;min-height:0!important;gap:5px!important;justify-content:flex-start!important}
-.phone:has(.home) .home .grid .appTile .icon{width:clamp(43px,14vw,60px)!important;height:clamp(43px,14vw,60px)!important;flex:0 0 auto!important;aspect-ratio:1}
-.phone:has(.home) .home .grid .appTile>span:last-child{font-size:clamp(10px,2.8vw,12px)!important;line-height:16px!important;height:16px!important;min-height:16px!important;overflow:hidden!important;text-overflow:ellipsis!important}
-.phone:has(.home) .home .dock{flex:0 0 auto!important;padding:8px 4px!important}
-.phone:has(.home) .home .spotlight,.phone:has(.home) .home .pageDots{flex:0 0 auto!important}
-@media(max-height:740px){.phone:has(.home) .home .grid .appTile .icon{width:clamp(38px,12vw,52px)!important;height:clamp(38px,12vw,52px)!important}.phone:has(.home) .home .grid{padding-top:4px!important}}
-
-/* Root cause: .appPage had padding-top:59px AND top:59px, creating a second status-bar gap. */
-.phone:has(.appPage) .appPage{padding-top:0!important;top:59px!important;inset-block-start:59px!important;bottom:0!important;box-sizing:border-box!important}
-.phone:has(.appPage) .appBody{flex:1 1 auto!important;min-height:0!important;height:auto!important}
-.phone:has(.appPage) .appBody .wx{height:100%!important}
-
-/* Keep the simulated iOS status bar, but never reserve its height twice */
-.phone:has(.appPage) .appPage{position:absolute!important;inset:59px 0 0!important;padding:0!important;margin:0!important;min-height:0!important}
-.phone:has(.appPage) .appBody{padding:0!important;margin:0!important;min-height:0!important;overflow:hidden!important}
-.phone:has(.appPage) .appBody:has(:global(.wx)){display:flex!important;flex-direction:column!important}
-
-/* FIX: app viewport already begins below status bar; padding-top was reserving it twice. */
-.phone:has(.appPage) .appPage{inset:59px 0 0!important;top:59px!important;padding:0!important;margin:0!important}
-.phone:has(.appPage) .island{display:none!important}
-.phone:has(.appPage) .appBody{padding:0!important;margin:0!important;min-height:0!important}
