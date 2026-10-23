@@ -44,3 +44,14 @@
 .wx-upload-wallpaper{color:#7b8791;font-size:13px;white-space:nowrap;cursor:pointer}
 .wx-upload-wallpaper input{display:none}
 .wx-chat-wallpaper-preview{height:140px;background-position:center;background-size:cover;margin:12px 18px;border-radius:11px;border:1px solid #d6dde4}
+
+.wx-owner-profile{display:flex;align-items:center;gap:16px;padding:20px 18px;background:#fff;margin:10px 0}
+.wx-owner-profile .wx-avatar.big{height:68px;width:68px;flex:0 0 68px;overflow:hidden;border-radius:9px}
+.wx-owner-profile b{display:block;font-size:18px;margin-bottom:8px}
+.wx-owner-profile small{color:#888;font-size:12px}
+.wx-history{flex:1;overflow-y:auto;background:#ededed;padding:14px 16px}
+.wx-history-title{padding:10px;color:#88909a;font-size:12px;text-align:center}
+.wx-history-item{background:#fff;margin:9px 0;padding:12px;border-radius:10px;line-height:1.45}
+.wx-history-item b{font-size:13px;margin-right:12px}
+.wx-history-item small{font-size:11px;color:#9b9b9b}
+.wx-history-item p{font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere;margin:9px 0 0}
