@@ -294,3 +294,74 @@
  padding-left:15px!important;
  text-align:left!important;
 }
+
+/* Compact one-screen Discover / Me layout — 2026-10-24.
+   Preserve left-aligned icon/label tracks, backend and navigation logic. */
+.wx .wx-discover-list button.wx-discover-row{
+ height:clamp(34px,5.2dvh,43px)!important;
+ min-height:0!important;
+ max-height:43px!important;
+ font-size:clamp(11px,2.8vw,13px)!important;
+ line-height:1.25!important;
+ padding:0 12px!important;
+ grid-template-columns:21px minmax(0,1fr) 10px!important;
+ column-gap:10px!important;
+}
+.wx .wx-discover-list .wx-discover-icon{
+ font-size:clamp(15px,4vw,19px)!important;
+ width:21px!important;
+ min-width:21px!important;
+ flex-basis:21px!important;
+}
+.wx .wx-discover-list .wx-discover-group-1,
+.wx .wx-discover-list .wx-discover-group-3,
+.wx .wx-discover-list .wx-discover-group-5,
+.wx .wx-discover-list .wx-discover-group-7,
+.wx .wx-discover-list .wx-discover-group-8,
+.wx .wx-discover-list .wx-discover-group-9{
+ margin-top:clamp(4px,.9dvh,8px)!important;
+}
+.wx .wx-me-list button.wx-me-row{
+ height:clamp(35px,5.2dvh,44px)!important;
+ min-height:0!important;
+ max-height:44px!important;
+ font-size:clamp(11px,2.8vw,13px)!important;
+ line-height:1.25!important;
+ padding:0 12px!important;
+ grid-template-columns:21px minmax(0,1fr) 10px!important;
+ column-gap:10px!important;
+}
+.wx .wx-me-list .wx-me-row .wx-discover-icon{
+ font-size:clamp(15px,4vw,19px)!important;
+ width:21px!important;
+ min-width:21px!important;
+ flex-basis:21px!important;
+}
+.wx .wx-me-list .wx-me{
+ height:clamp(74px,11dvh,94px)!important;
+ min-height:0!important;
+ margin:0!important;
+ padding:10px 13px!important;
+ gap:11px!important;
+}
+.wx .wx-me-list .wx-me .wx-avatar{
+ width:clamp(42px,12vw,52px)!important;
+ height:clamp(42px,12vw,52px)!important;
+ flex-basis:clamp(42px,12vw,52px)!important;
+}
+.wx .wx-me-list .wx-me b{font-size:clamp(14px,3.8vw,17px)!important}
+.wx .wx-me-list .wx-me small{font-size:11px!important;margin-top:4px!important}
+.wx .wx-me-status{margin-bottom:7px!important;padding:0 12px 8px!important;gap:6px!important}
+.wx .wx-me-status span{font-size:10px!important;padding:3px 8px!important}
+.wx .wx-me-list .wx-me-row-1,
+.wx .wx-me-list .wx-me-row-6{margin-top:7px!important}
+.wx .wx-discover-list,.wx .wx-me-list{padding-bottom:0!important}
+.wx .wx-tabs{height:50px!important;min-height:50px!important;flex-basis:50px!important;padding:3px 0 2px!important}
+.wx .wx-tabs button svg{width:21px!important;height:21px!important}
+.wx .wx-tabs small{font-size:10px!important}
+@media(max-height:650px){
+ .wx .wx-discover-list button.wx-discover-row{height:33px!important}
+ .wx .wx-me-list button.wx-me-row{height:34px!important}
+ .wx .wx-me-list .wx-me{height:72px!important}
+ .wx .wx-discover-list .wx-discover-group-1,.wx .wx-discover-list .wx-discover-group-3,.wx .wx-discover-list .wx-discover-group-5,.wx .wx-discover-list .wx-discover-group-7,.wx .wx-discover-list .wx-discover-group-8,.wx .wx-discover-list .wx-discover-group-9{margin-top:4px!important}
+}
