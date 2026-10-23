@@ -124,3 +124,26 @@
 .wx-chat-info-group .wx-switch:before{content:'';position:absolute;top:2px;left:2px;width:24px;height:24px;background:#fff;border-radius:50%;box-shadow:0 1px 3px #0002;transition:transform .15s}
 .wx-chat-info-group .wx-switch.on:before{transform:translateX(20px)}
 .wx-chat-info-group .wx-chat-wallpaper-option input[type=file]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+
+/* Mobile reference correction: restore realistic WeChat density */
+.wx{font-size:14px!important}
+.wx-top{height:49px!important;flex:0 0 49px!important;padding:0 14px!important}
+.wx-top h1{font-size:18px!important;line-height:1.2!important}
+.wx-list{min-height:0;overflow-y:auto!important;background:#fff}
+.wx-person{min-height:68px!important;padding:9px 13px!important;gap:11px!important}
+.wx-person .wx-avatar{width:46px!important;height:46px!important}
+.wx-person-body strong{font-size:16px!important}
+.wx-person-body small{font-size:12px!important}
+.wx-tabs{height:58px!important;flex:0 0 58px!important;padding:5px 0 3px!important}
+.wx-tabs button{gap:2px!important}
+.wx-tabs small{font-size:10px!important}
+.wx-contact-shortcuts button{min-height:53px!important;padding:6px 15px!important;font-size:15px!important}
+.wx-shortcut-icon{width:39px!important;height:39px!important}
+.wx-letter{padding:5px 14px!important;font-size:12px!important}
+.wx-alphabet{right:3px!important;top:18%!important;bottom:70px!important;font-size:9px!important;z-index:3}
+.wx-discover-list,.wx-me-list{overflow-y:auto!important;min-height:0!important;background:#ededed!important}
+.wx-discover-row,.wx-me-row{min-height:52px!important;padding:0 16px!important;background:#fff!important;font-size:15px!important}
+.wx-discover-group-1,.wx-discover-group-3,.wx-discover-group-5,.wx-discover-group-7,.wx-discover-group-8{margin-top:9px!important}
+.wx-me-list .wx-me{min-height:120px!important;padding:19px 17px!important;margin-bottom:9px!important;background:#fff!important}
+.wx-me-list .wx-me b{font-size:19px!important}
+.wx-me-list .wx-me small{font-size:12px!important}
