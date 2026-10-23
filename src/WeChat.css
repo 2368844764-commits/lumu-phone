@@ -225,3 +225,25 @@
 .wx .wx-tabs button.active{color:#07b65a!important}
 .wx .wx-tabs small{font-size:11px!important}
 @media(max-height:690px){.wx .wx-conversations .wx-person{height:62px!important;min-height:62px!important}.wx .wx-contact-shortcuts button{height:51px!important;min-height:51px!important}.wx .wx-discover-list .wx-discover-row{height:49px!important;min-height:49px!important}}
+
+/* Reference alignment correction: feature rows are left-anchored icon + label. */
+.wx .wx-contact-shortcuts button,
+.wx .wx-discover-list .wx-discover-row,
+.wx .wx-me-list .wx-me-row{
+ display:flex!important;flex-direction:row!important;justify-content:flex-start!important;
+ align-items:center!important;text-align:left!important;
+ padding-left:15px!important;padding-right:14px!important;
+ gap:13px!important;
+}
+.wx .wx-contact-shortcuts button .wx-shortcut-icon,
+.wx .wx-discover-list .wx-discover-row .wx-discover-icon,
+.wx .wx-me-list .wx-me-row .wx-discover-icon{
+ display:inline-flex!important;align-items:center!important;justify-content:center!important;
+ margin:0!important;flex-shrink:0!important;
+}
+.wx .wx-discover-list .wx-discover-row>span:last-child,
+.wx .wx-me-list .wx-me-row>span:last-child{
+ margin-left:auto!important;flex-shrink:0!important;
+}
+.wx .wx-contact-shortcuts button{justify-content:flex-start!important;text-align:left!important}
+.wx .wx-me-list .wx-me{justify-content:flex-start!important;text-align:left!important}
