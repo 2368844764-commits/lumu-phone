@@ -410,3 +410,79 @@
 .wx .wx-me-list .wx-me-identity b{display:block!important;font-size:15px!important;line-height:19px!important;margin:0!important}
 .wx .wx-me-list .wx-me-identity small{display:block!important;font-size:11px!important;line-height:15px!important;margin:0!important}
 .wx .wx-me-list .wx-me-arrow{display:block!important;position:static!important;flex:0 0 12px!important;margin-left:auto!important;align-self:center!important;line-height:1!important;font-size:20px!important}
+
+/* 2026-10-24 VERIFIED STRUCTURAL TARGETS: feature labels are explicit spans.
+   Fixed left grid; compact all-tab typography; no changes to backend handlers. */
+.wx .wx-discover-list>button.wx-discover-row,
+.wx .wx-me-list>button.wx-me-row{
+ box-sizing:border-box!important;
+ display:grid!important;
+ grid-template-columns:20px minmax(0,1fr) 10px!important;
+ align-items:center!important;
+ justify-items:start!important;
+ justify-content:stretch!important;
+ width:100%!important;
+ height:34px!important;
+ min-height:34px!important;
+ max-height:34px!important;
+ margin-left:0!important;
+ margin-right:0!important;
+ padding:0 12px!important;
+ gap:9px!important;
+ text-align:left!important;
+ font-size:12px!important;
+ line-height:17px!important;
+}
+.wx .wx-discover-list>button.wx-discover-row>.wx-discover-icon,
+.wx .wx-me-list>button.wx-me-row>.wx-discover-icon{
+ grid-column:1!important;
+ grid-row:1!important;
+ width:20px!important;
+ margin:0!important;
+ justify-self:start!important;
+ font-size:17px!important;
+ line-height:20px!important;
+ text-align:left!important;
+}
+.wx .wx-discover-list>button.wx-discover-row>.wx-feature-label,
+.wx .wx-me-list>button.wx-me-row>.wx-feature-label{
+ grid-column:2!important;
+ grid-row:1!important;
+ display:block!important;
+ width:auto!important;
+ margin:0!important;
+ padding:0!important;
+ justify-self:start!important;
+ text-align:left!important;
+ font-size:12px!important;
+ line-height:17px!important;
+ white-space:nowrap!important;
+}
+.wx .wx-discover-list>button.wx-discover-row>.wx-feature-chevron,
+.wx .wx-me-list>button.wx-me-row>.wx-feature-chevron{
+ grid-column:3!important;
+ grid-row:1!important;
+ justify-self:end!important;
+ margin:0!important;
+ font-size:16px!important;
+ color:#aaa!important;
+}
+.wx .wx-discover-list>button.wx-discover-row.wx-discover-group-1,
+.wx .wx-discover-list>button.wx-discover-row.wx-discover-group-3,
+.wx .wx-discover-list>button.wx-discover-row.wx-discover-group-5,
+.wx .wx-discover-list>button.wx-discover-row.wx-discover-group-7,
+.wx .wx-discover-list>button.wx-discover-row.wx-discover-group-8,
+.wx .wx-discover-list>button.wx-discover-row.wx-discover-group-9{
+ margin-top:5px!important;
+}
+.wx .wx-me-list>button.wx-me-row.wx-me-row-1,
+.wx .wx-me-list>button.wx-me-row.wx-me-row-6{margin-top:6px!important}
+.wx .wx-top{position:relative!important;height:43px!important;min-height:43px!important;flex:0 0 43px!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:0 12px!important}
+.wx .wx-top>h1{position:static!important;transform:none!important;margin:0!important;line-height:23px!important;font-size:16px!important;align-self:center!important}
+.wx .wx-top>.wx-top-actions{position:absolute!important;right:12px!important;top:0!important;bottom:0!important;left:auto!important;display:flex!important;align-items:center!important;justify-content:flex-end!important;height:43px!important;gap:12px!important;margin:0!important;transform:none!important}
+.wx .wx-me-list>.wx-me{display:flex!important;align-items:center!important;justify-content:flex-start!important;height:80px!important;min-height:80px!important;padding:10px 12px!important;gap:11px!important}
+.wx .wx-me-list>.wx-me>.wx-avatar{width:48px!important;height:48px!important;flex:0 0 48px!important}
+.wx .wx-me-list>.wx-me>.wx-me-identity{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;flex:1 1 auto!important;gap:5px!important;margin:0!important}
+.wx .wx-me-list>.wx-me>.wx-me-arrow{align-self:center!important;flex:0 0 auto!important;margin-left:auto!important}
+.wx .wx-conversations .wx-person-body strong,.wx .wx-contacts .wx-person>strong,.wx .wx-contact-shortcuts button{font-size:12px!important}
+.wx .wx-tabs small{font-size:10px!important}
