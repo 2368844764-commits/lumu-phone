@@ -87,3 +87,11 @@
 .home .dock .dock_camera{background:linear-gradient(145deg,#e5e8ec,#939ca7)!important}
 .home .dock .dock_phone{background:linear-gradient(145deg,#51f477,#00b834)!important}
 .home .dock .dock_messages{background:linear-gradient(145deg,#52f779,#00c63c)!important}
+
+/* Fix: fractional six-row tracks collapsed on short mobile viewports,
+   causing app labels to overlap the next row. Each row now fits its icon + caption. */
+.home .grid{flex:1 1 auto;grid-template-rows:none;grid-auto-rows:clamp(85px,12.2dvh,108px);align-content:start;row-gap:clamp(4px,1.1dvh,12px);overflow:hidden;padding:8px 0 0}
+.home .appTile{height:auto;min-height:0;align-self:start;justify-content:flex-start;line-height:1.3}
+.home .appTile>span:last-child{display:block;min-height:16px;line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.home .widgetShelf + .grid{grid-template-rows:none}
+@media(max-height:700px){.home .grid{grid-auto-rows:clamp(69px,11.4dvh,86px);row-gap:3px}}
