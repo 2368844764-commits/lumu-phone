@@ -224,3 +224,11 @@
 .phone:has(.appPage) .appPage{bottom:12px!important}
 .phone:has(.appPage):has(:global(.wx)) .appPage{bottom:12px!important;inset:44px 0 12px!important}
 @media(max-height:730px){.phone:has(.home) .grid .appTile .icon{width:min(13vw,53px)!important;height:min(13vw,53px)!important}.phone:has(.home) .dock{flex-basis:75px!important;height:75px!important}}
+
+/* Home icon collision fix: each app occupies a full grid cell including its label. */
+.phone:has(.home) .grid{grid-template-rows:repeat(6,minmax(0,1fr))!important;row-gap:0!important;align-items:stretch!important}
+.phone:has(.home) .grid .appTile{box-sizing:border-box!important;align-self:stretch!important;justify-content:flex-start!important;overflow:visible!important;gap:5px!important;height:100%!important;min-height:0!important;padding-top:0!important}
+.phone:has(.home) .grid .appTile>span:last-child{display:block!important;position:static!important;flex:0 0 auto!important;line-height:1.25!important;max-width:100%!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+.phone:has(.home) .grid .appTile .icon{flex-shrink:0!important;width:min(14vw,58px)!important;height:min(14vw,58px)!important}
+.phone:has(.home) .homeToolbar{flex-basis:8px!important;height:8px!important}
+@media(max-height:750px){.phone:has(.home) .grid .appTile .icon{width:min(12vw,48px)!important;height:min(12vw,48px)!important}.phone:has(.home) .grid .appTile{gap:3px!important}}
