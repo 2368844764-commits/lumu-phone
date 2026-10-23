@@ -232,3 +232,32 @@
 .phone:has(.home) .grid .appTile .icon{flex-shrink:0!important;width:min(14vw,58px)!important;height:min(14vw,58px)!important}
 .phone:has(.home) .homeToolbar{flex-basis:8px!important;height:8px!important}
 @media(max-height:750px){.phone:has(.home) .grid .appTile .icon{width:min(12vw,48px)!important;height:min(12vw,48px)!important}.phone:has(.home) .grid .appTile{gap:3px!important}}
+/* Home layout definitive fix: rows are sized for icon AND caption, not six fractional tracks. */
+.phone:has(.home) .grid{
+ flex:1 1 0!important;min-height:0!important;display:grid!important;
+ grid-template-columns:repeat(4,minmax(0,1fr))!important;
+ grid-template-rows:repeat(4,clamp(86px,11.5dvh,112px))!important;
+ grid-auto-rows:clamp(86px,11.5dvh,112px)!important;
+ align-content:start!important;align-items:start!important;
+ justify-items:center!important;row-gap:clamp(6px,1.1dvh,14px)!important;
+ column-gap:6px!important;overflow:hidden!important;padding:10px 0 0!important;
+}
+.phone:has(.home) .grid .appTile{
+ display:flex!important;flex-direction:column!important;align-items:center!important;
+ justify-content:flex-start!important;align-self:start!important;
+ box-sizing:border-box!important;width:100%!important;height:auto!important;
+ min-height:0!important;gap:6px!important;padding:0!important;
+ overflow:visible!important;
+}
+.phone:has(.home) .grid .appTile .icon{
+ width:clamp(48px,14vw,62px)!important;height:clamp(48px,14vw,62px)!important;
+ flex:0 0 auto!important;
+}
+.phone:has(.home) .grid .appTile>span:last-child{
+ display:block!important;position:static!important;flex:0 0 auto!important;
+ width:100%!important;height:auto!important;min-height:16px!important;
+ line-height:17px!important;font-size:clamp(10px,2.8vw,12px)!important;
+ text-align:center!important;white-space:nowrap!important;overflow:hidden!important;
+ text-overflow:ellipsis!important;
+}
+@media(max-height:690px){.phone:has(.home) .grid{grid-template-rows:repeat(4,80px)!important;grid-auto-rows:80px!important;row-gap:5px!important}.phone:has(.home) .grid .appTile .icon{width:46px!important;height:46px!important}}
