@@ -63,3 +63,19 @@
 .incomingBanner strong{font-size:14px;font-weight:620}
 .incomingBanner span:last-child{font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 @keyframes slideInBanner{from{transform:translateY(-18px);opacity:0}to{transform:translateY(0);opacity:1}}
+
+/* iOS reference home screen — 4 columns, six rows, glass dock, no vertical scroll */
+.home{position:relative;padding:18px 16px max(22px,env(safe-area-inset-bottom));gap:0;justify-content:flex-start;overflow:hidden;touch-action:pan-x}
+.home .grid{flex:1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(6,minmax(0,1fr));grid-auto-rows:minmax(0,1fr);align-content:stretch;justify-items:center;gap:0 9px;overflow:hidden;padding:8px 0 0}
+.home .appTile{align-self:start;width:100%;gap:6px;font-size:clamp(10px,2.9vw,13px);font-weight:500;text-shadow:0 1px 4px #0009}
+.home .icon{width:min(16.2vw,66px);height:min(16.2vw,66px);border-radius:22%;box-shadow:0 2px 8px #0003}
+.home .icon img{border-radius:22%!important}
+.home .dock{margin:0 0 1px;min-height:0;height:clamp(75px,12vh,102px);padding:9px 6px;border-radius:31px;background:#d5dce255;border:1px solid #ffffff66;box-shadow:inset 0 1px 1px #fff5;backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px)}
+.home .dock .icon{width:min(16vw,65px);height:min(16vw,65px)}
+.home .spotlight{align-self:center;display:flex;align-items:center;justify-content:center;gap:5px;background:#606a7790;border:1px solid #ffffff35;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:22px;color:#f4f4f4;font-size:12px;height:27px;padding:0 13px;margin:2px 0 9px}
+.home .pageDots{position:absolute;bottom:calc(clamp(75px,12vh,102px) + 24px);left:50%;transform:translateX(-50%);margin:0;gap:5px}
+.home .pageDots button{width:5px;height:5px;opacity:.7}
+.home .pageDots:has(button:nth-child(1):last-child){display:none}
+.home .widgetShelf{margin:0 0 8px;max-height:112px}
+.home .widgetShelf + .grid{grid-template-rows:repeat(4,minmax(0,1fr))}
+@media(max-height:700px){.home .grid{gap:0 7px}.home .icon{width:min(13.5vw,52px);height:min(13.5vw,52px)}.home .appTile{font-size:10px;gap:3px}.home .dock{height:74px}.home .spotlight{margin-bottom:7px}}
