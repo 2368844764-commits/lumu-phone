@@ -172,3 +172,22 @@
  .home .grid .appTile{height:85px!important;min-height:85px!important;gap:5px!important}
  .home .grid .appTile .icon{width:54px!important;height:54px!important;flex-basis:54px!important}
 }
+
+/* Reference iPhone status bar: no black Dynamic Island on the home screen.
+   Keep the lock/pass screens unchanged and reserve safe-area spacing. */
+.phone:has(.home) .island{display:none!important}
+.phone:has(.home) .status{
+ height:59px!important;
+ padding:16px 27px 0!important;
+ align-items:flex-start!important;
+ color:#fff!important;
+ font-size:16px!important;
+ font-weight:650!important;
+ letter-spacing:.1px;
+ text-shadow:0 1px 3px #0005;
+}
+.phone:has(.home) .statusIcons{display:flex;align-items:center;gap:7px}
+.batteryShell{position:relative;display:inline-flex;width:25px;height:12px;border:1.8px solid currentColor;border-radius:4px;align-items:center;padding:2px}
+.batteryShell:after{content:'';position:absolute;right:-4px;top:3px;width:2px;height:4px;border-radius:0 2px 2px 0;background:currentColor;opacity:.75}
+.batteryFill{width:100%;height:100%;border-radius:1.5px;background:currentColor}
+@media(max-width:500px){.phone:has(.home) .status{padding-top:max(16px,env(safe-area-inset-top))!important}}
