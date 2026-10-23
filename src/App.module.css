@@ -235,3 +235,8 @@
 .phone:has(.appPage) .appPage{padding-top:0!important;top:59px!important;inset-block-start:59px!important;bottom:0!important;box-sizing:border-box!important}
 .phone:has(.appPage) .appBody{flex:1 1 auto!important;min-height:0!important;height:auto!important}
 .phone:has(.appPage) .appBody .wx{height:100%!important}
+
+/* Keep the simulated iOS status bar, but never reserve its height twice */
+.phone:has(.appPage) .appPage{position:absolute!important;inset:59px 0 0!important;padding:0!important;margin:0!important;min-height:0!important}
+.phone:has(.appPage) .appBody{padding:0!important;margin:0!important;min-height:0!important;overflow:hidden!important}
+.phone:has(.appPage) .appBody:has(:global(.wx)){display:flex!important;flex-direction:column!important}
