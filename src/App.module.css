@@ -230,3 +230,8 @@
 .phone:has(.home) .home .dock{flex:0 0 auto!important;padding:8px 4px!important}
 .phone:has(.home) .home .spotlight,.phone:has(.home) .home .pageDots{flex:0 0 auto!important}
 @media(max-height:740px){.phone:has(.home) .home .grid .appTile .icon{width:clamp(38px,12vw,52px)!important;height:clamp(38px,12vw,52px)!important}.phone:has(.home) .home .grid{padding-top:4px!important}}
+
+/* Root cause: .appPage had padding-top:59px AND top:59px, creating a second status-bar gap. */
+.phone:has(.appPage) .appPage{padding-top:0!important;top:59px!important;inset-block-start:59px!important;bottom:0!important;box-sizing:border-box!important}
+.phone:has(.appPage) .appBody{flex:1 1 auto!important;min-height:0!important;height:auto!important}
+.phone:has(.appPage) .appBody .wx{height:100%!important}
