@@ -240,3 +240,8 @@
 .phone:has(.appPage) .appPage{position:absolute!important;inset:59px 0 0!important;padding:0!important;margin:0!important;min-height:0!important}
 .phone:has(.appPage) .appBody{padding:0!important;margin:0!important;min-height:0!important;overflow:hidden!important}
 .phone:has(.appPage) .appBody:has(:global(.wx)){display:flex!important;flex-direction:column!important}
+
+/* FIX: app viewport already begins below status bar; padding-top was reserving it twice. */
+.phone:has(.appPage) .appPage{inset:59px 0 0!important;top:59px!important;padding:0!important;margin:0!important}
+.phone:has(.appPage) .island{display:none!important}
+.phone:has(.appPage) .appBody{padding:0!important;margin:0!important;min-height:0!important}
