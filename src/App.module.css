@@ -210,3 +210,10 @@
 .phone:has(.appPage) .homeIndicator{opacity:0;pointer-events:none}
 .phone:has(.home) .homeIndicator{opacity:0;pointer-events:none}
 @media(max-width:600px){.stage{padding:0;min-height:100dvh;background:#000}.phone{width:100vw;height:100dvh;min-height:0;max-height:none;border:0;border-radius:0;box-shadow:none}.caption{display:none}}
+
+/* iOS-style app switcher: upward swipe and hold */
+.appSwitcher{position:absolute;inset:55px 0 0;z-index:20;background:rgba(33,38,57,.68);backdrop-filter:blur(18px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;color:white}
+.switcherCard{width:72%;height:56%;border-radius:22px;background:linear-gradient(155deg,#f9fafc,#e8e9ee);color:#222;box-shadow:0 16px 38px #0004;display:flex;flex-direction:column;overflow:hidden;transform:scale(.96)}
+.switcherCardTitle{font-size:16px;font-weight:600;padding:18px;background:#ededed;text-align:center}
+.switcherCardContent{flex:1;display:grid;place-items:center;color:#888;font-size:13px}
+.switcherHome{background:#ffffff30!important;color:white!important;padding:10px 24px;border-radius:24px}
