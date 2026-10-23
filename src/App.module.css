@@ -150,3 +150,25 @@
  .home .grid .appTile{gap:4px;min-height:76px}
  .home .grid .appTile .icon{width:clamp(43px,13vw,54px);height:clamp(43px,13vw,54px)}
 }
+
+/* Final override: reserve real vertical space per app, independently of grid track flex sizing. */
+.home .grid{
+ display:grid!important;
+ flex:1 1 auto!important;
+ grid-template-columns:repeat(4,minmax(0,1fr))!important;
+ grid-template-rows:none!important;
+ grid-auto-rows:112px!important;
+ row-gap:12px!important;
+ align-content:start!important;
+ align-items:start!important;
+ overflow:hidden!important;
+ padding-top:16px!important;
+}
+.home .grid .appTile{height:96px!important;min-height:96px!important;align-self:start!important;gap:7px!important}
+.home .grid .appTile .icon{width:60px!important;height:60px!important;flex:0 0 60px!important}
+.home .grid .appTile>span:last-child{height:20px!important;min-height:20px!important;line-height:20px!important;font-size:12px!important;overflow:visible!important}
+@media(max-height:730px){
+ .home .grid{grid-auto-rows:96px!important;row-gap:5px!important;padding-top:8px!important}
+ .home .grid .appTile{height:85px!important;min-height:85px!important;gap:5px!important}
+ .home .grid .appTile .icon{width:54px!important;height:54px!important;flex-basis:54px!important}
+}
