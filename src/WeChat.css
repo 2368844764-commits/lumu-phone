@@ -147,3 +147,33 @@
 .wx-me-list .wx-me{min-height:120px!important;padding:19px 17px!important;margin-bottom:9px!important;background:#fff!important}
 .wx-me-list .wx-me b{font-size:19px!important}
 .wx-me-list .wx-me small{font-size:12px!important}
+
+/* WeChat mobile fidelity: compact fixed header and tab bar, scroll only the content */
+.wx{overflow:hidden;font-size:15px}
+.wx .wx-top{height:51px;min-height:51px;padding:0 15px;position:relative;display:flex;align-items:center;justify-content:center;background:#ededed;border-bottom:1px solid #dedede}
+.wx .wx-top h1{font-size:18px;line-height:1.2;font-weight:600;margin:0}
+.wx .wx-top-actions{right:12px;display:flex;align-items:center;gap:15px}
+.wx .wx-top-actions button{padding:3px}
+.wx .wx-list{min-height:0;overflow-y:auto;overflow-x:hidden;position:relative;background:#fff}
+.wx .wx-person{min-height:66px;padding:9px 15px;gap:12px}
+.wx .wx-person .wx-avatar{width:47px;height:47px;flex:0 0 47px}
+.wx .wx-person-body strong{font-size:16px;line-height:1.3}
+.wx .wx-person-body small{font-size:13px;line-height:1.3}
+.wx .wx-person time{font-size:11px;flex-shrink:0}
+.wx .wx-context-hint{display:none}
+.wx .wx-tabs{height:60px;min-height:60px;box-sizing:border-box;padding:7px 0 4px;align-items:center;z-index:3}
+.wx .wx-tabs button{gap:3px;min-width:0;flex:1}
+.wx .wx-tabs small{font-size:11px}
+.wx .wx-contact-shortcuts button{min-height:55px;padding:7px 16px;gap:14px;font-size:15px}
+.wx .wx-shortcut-icon{width:38px;height:38px;font-size:21px}
+.wx .wx-alphabet{position:sticky;float:right;right:2px;top:0;height:0;bottom:auto;display:none}
+.wx .wx-discover-list,.wx .wx-me-list{background:#ededed}
+.wx .wx-discover-list .wx-discover-row,.wx .wx-me-list .wx-me-row{display:flex;align-items:center;gap:13px;min-height:53px;height:53px;box-sizing:border-box;margin:0;padding:0 17px;background:#fff;color:#222;border-bottom:1px solid #ededed;font-size:16px;text-align:left}
+.wx .wx-discover-row .wx-discover-icon,.wx .wx-me-row .wx-discover-icon{flex:0 0 27px;text-align:center;font-size:22px}
+.wx .wx-discover-row>span:last-child,.wx .wx-me-row>span:last-child{margin-left:auto;color:#bbb}
+.wx .wx-discover-list .wx-discover-group-1,.wx .wx-discover-list .wx-discover-group-3,.wx .wx-discover-list .wx-discover-group-5,.wx .wx-discover-list .wx-discover-group-7,.wx .wx-discover-list .wx-discover-group-8{margin-top:9px}
+.wx .wx-me-list .wx-me{box-sizing:border-box;display:flex;align-items:center;width:100%;min-height:135px;height:135px;margin:0 0 10px;padding:18px 17px;background:#fff;text-align:left;gap:16px}
+.wx .wx-me-list .wx-me .wx-avatar{width:65px;height:65px;flex:0 0 65px}
+.wx .wx-me-list .wx-me b{font-size:20px}
+.wx .wx-me-list .wx-me small{font-size:13px;margin-top:7px}
+.wx .wx-me-list .wx-me-row-1,.wx .wx-me-list .wx-me-row-6{margin-top:9px}
