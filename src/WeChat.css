@@ -55,3 +55,55 @@
 .wx-history-item b{font-size:13px;margin-right:12px}
 .wx-history-item small{font-size:11px;color:#9b9b9b}
 .wx-history-item p{font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere;margin:9px 0 0}
+
+/* WeChat V1.3 — reference-matched hierarchy, spacing and controls */
+.wx{background:#ededed}
+.wx-top{background:#ededed;border-bottom:1px solid #e2e2e2;justify-content:center;position:relative}
+.wx-top h1{font-size:19px;font-weight:600}
+.wx-top-actions{position:absolute;right:13px;top:50%;transform:translateY(-50%)}
+.wx-top-actions button{color:#141414}
+.wx-tabs{background:#fafafa;border-top:1px solid #dedede}
+.wx-tabs button{color:#171717}
+.wx-tabs button.active{color:#08b85b}
+.wx-tabs small{font-size:11px}
+.wx-person{min-height:77px;gap:13px;padding:10px 15px}
+.wx-person-body strong{font-size:16px}
+.wx-person-body small{font-size:13px}
+.wx-person time{font-size:11px}
+.wx-header{background:#ededed}
+.wx-plus-menu{position:absolute;z-index:11;right:9px;top:51px;background:#4c4c4c;color:#fff;width:176px;border-radius:7px;box-shadow:0 8px 18px #0004;overflow:visible}
+.wx-plus-menu:before{content:'';position:absolute;top:-8px;right:14px;border-left:9px solid transparent;border-right:9px solid transparent;border-bottom:9px solid #4c4c4c}
+.wx-plus-menu button{display:flex;align-items:center;gap:17px;width:100%;color:#fff;text-align:left;padding:15px 17px;border-bottom:1px solid #666;font-size:15px}
+.wx-plus-menu button:last-child{border-bottom:0}
+.wx-contact-shortcuts{background:#fff}
+.wx-contact-shortcuts button{display:flex;align-items:center;gap:17px;width:100%;padding:10px 16px;min-height:60px;text-align:left;font-size:16px;border-bottom:1px solid #f0f0f0}
+.wx-shortcut-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:6px;background:#ffa844;color:#fff;font-size:24px;flex-shrink:0}
+.wx-contact-shortcuts button:nth-child(3) .wx-shortcut-icon{background:#17bd64}
+.wx-contact-shortcuts button:nth-child(n+4) .wx-shortcut-icon{background:#308bdf}
+.wx-alphabet{position:absolute;right:1px;top:28%;bottom:65px;display:flex;flex-direction:column;justify-content:space-around;pointer-events:none;color:#333;font-size:9px;z-index:2}
+.wx-discover-list,.wx-me-list{background:#ededed}
+.wx-discover-row,.wx-me-row{background:#fff;min-height:58px;border-bottom:1px solid #eee!important}
+.wx-discover-icon{display:grid;place-items:center;flex:0 0 30px;font-size:23px;color:#299bc4}
+.wx-discover-row:nth-child(1) .wx-discover-icon{color:#6cbd57}
+.wx-discover-row:nth-child(2) .wx-discover-icon{color:#f0a14e}
+.wx-discover-row:nth-child(3) .wx-discover-icon{color:#f16e6e}
+.wx-discover-group-1,.wx-discover-group-3,.wx-discover-group-5,.wx-discover-group-7,.wx-discover-group-8{margin-top:10px}
+.wx-me-list .wx-me{background:#fff;margin:0 0 13px;min-height:155px;align-items:center;text-align:left}
+.wx-me-list .wx-me b{font-size:20px}
+.wx-me-list .wx-me small{font-size:13px}
+.wx-me-row-1,.wx-me-row-6{margin-top:12px}
+.wx-chat-participants{background:#fff;display:flex;gap:15px;padding:20px 17px;margin-bottom:12px}
+.wx-participant{display:flex;align-items:center;flex-direction:column;gap:8px;max-width:75px}
+.wx-participant .wx-avatar,.wx-add-participant{width:55px;height:55px;border-radius:7px}
+.wx-add-participant{display:grid;place-items:center;border:1.5px dashed #ccc;font-size:35px;color:#bbb;font-weight:200}
+.wx-participant small{max-width:68px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;color:#888;font-size:11px}
+.wx-profile{padding:0;background:#ededed;display:flex;flex-direction:column;gap:12px;overflow-y:auto}
+.wx-profile-hero{display:flex;gap:17px;align-items:center;background:#fff;padding:28px 20px 22px}
+.wx-profile-hero .wx-avatar.big{width:75px;height:75px;flex:0 0 75px}
+.wx-profile-hero h2{margin:0 0 8px;font-size:22px}
+.wx-profile-hero p{margin:4px 0;font-size:13px;color:#777;line-height:1.45}
+.wx-profile-links{background:#fff}
+.wx-profile-links button{margin:0;background:#fff;color:#222;text-align:left;border-radius:0;border-bottom:1px solid #eee;width:100%;padding:17px 19px;font-size:16px}
+.wx-profile-links span{float:right;color:#bbb}
+.wx-profile-actions{background:#fff}
+.wx-profile-actions button{margin:0;background:#fff;color:#566f96;border-radius:0;border-bottom:1px solid #eee;padding:18px;font-size:17px;font-weight:500}
