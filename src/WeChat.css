@@ -365,3 +365,22 @@
  .wx .wx-me-list .wx-me{height:72px!important}
  .wx .wx-discover-list .wx-discover-group-1,.wx .wx-discover-list .wx-discover-group-3,.wx .wx-discover-list .wx-discover-group-5,.wx .wx-discover-list .wx-discover-group-7,.wx .wx-discover-list .wx-discover-group-8,.wx .wx-discover-list .wx-discover-group-9{margin-top:4px!important}
 }
+
+/* Final viewport-oriented WeChat compactness: align title and actions on one baseline. */
+.wx .wx-top{display:grid!important;grid-template-columns:1fr auto 1fr!important;align-items:center!important;justify-items:center!important;height:42px!important;min-height:42px!important;flex-basis:42px!important;padding:0 12px!important}
+.wx .wx-top h1{grid-column:2!important;align-self:center!important;font-size:16px!important;line-height:22px!important;margin:0!important}
+.wx .wx-top-actions{position:static!important;grid-column:3!important;grid-row:1!important;justify-self:end!important;align-self:center!important;height:42px!important;display:flex!important;align-items:center!important;gap:12px!important}
+.wx .wx-top-actions button{width:25px!important;height:30px!important;padding:0!important;display:grid!important;place-items:center!important}
+.wx .wx-top-actions button svg{width:19px!important;height:19px!important}
+.wx .wx-discover-list button.wx-discover-row{height:32px!important;min-height:32px!important;max-height:32px!important;font-size:12px!important;padding:0 11px!important;grid-template-columns:19px minmax(0,1fr) 10px!important;column-gap:9px!important}
+.wx .wx-discover-list .wx-discover-icon{font-size:17px!important;width:19px!important;min-width:19px!important;flex-basis:19px!important}
+.wx .wx-discover-list .wx-discover-group-1,.wx .wx-discover-list .wx-discover-group-3,.wx .wx-discover-list .wx-discover-group-5,.wx .wx-discover-list .wx-discover-group-7,.wx .wx-discover-list .wx-discover-group-8,.wx .wx-discover-list .wx-discover-group-9{margin-top:5px!important}
+.wx .wx-me-list button.wx-me-row{height:33px!important;min-height:33px!important;max-height:33px!important;font-size:12px!important;padding:0 11px!important;grid-template-columns:19px minmax(0,1fr) 10px!important;column-gap:9px!important}
+.wx .wx-me-list .wx-me-row .wx-discover-icon{font-size:17px!important;width:19px!important;min-width:19px!important;flex-basis:19px!important}
+.wx .wx-me-list .wx-me{height:78px!important;min-height:78px!important;padding:9px 12px!important;gap:10px!important}
+.wx .wx-me-list .wx-me .wx-avatar{width:48px!important;height:48px!important;flex-basis:48px!important}
+.wx .wx-me-list .wx-me b{font-size:15px!important}
+.wx .wx-me-list .wx-me small{font-size:11px!important}
+.wx .wx-me-status{padding:0 11px 6px!important;margin-bottom:6px!important}
+.wx .wx-me-list .wx-me-row-1,.wx .wx-me-list .wx-me-row-6{margin-top:6px!important}
+.wx .wx-discover-list,.wx .wx-me-list{overflow-y:auto!important}
