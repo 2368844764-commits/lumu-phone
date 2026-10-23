@@ -486,3 +486,17 @@
 .wx .wx-me-list>.wx-me>.wx-me-arrow{align-self:center!important;flex:0 0 auto!important;margin-left:auto!important}
 .wx .wx-conversations .wx-person-body strong,.wx .wx-contacts .wx-person>strong,.wx .wx-contact-shortcuts button{font-size:12px!important}
 .wx .wx-tabs small{font-size:10px!important}
+
+/* Owner profile: faithful compact list layout, consistent with 12px WeChat UI. */
+.wx .wx-personal-header{height:43px!important;min-height:43px!important;flex:0 0 43px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;padding:0 12px!important;background:#ededed!important}
+.wx .wx-personal-header>strong{position:absolute!important;left:50%!important;transform:translateX(-50%)!important;font-size:16px!important;line-height:24px!important}
+.wx .wx-personal-header>button{display:grid!important;place-items:center!important;padding:0!important;width:28px!important;height:35px!important}
+.wx .wx-personal-list{background:#ededed!important;overflow-y:auto!important}
+.wx .wx-personal-row{box-sizing:border-box!important;display:grid!important;grid-template-columns:minmax(85px,1fr) minmax(0,1.6fr) 12px!important;align-items:center!important;width:100%!important;height:43px!important;min-height:43px!important;padding:0 12px!important;margin:0!important;background:#fff!important;border-bottom:1px solid #f1f1f1!important;gap:7px!important;text-align:left!important;font-size:12px!important;line-height:18px!important}
+.wx .wx-personal-row-0{height:58px!important;min-height:58px!important}
+.wx .wx-personal-row-9,.wx .wx-personal-row-10,.wx .wx-personal-row-12{margin-top:8px!important}
+.wx .wx-personal-row>.wx-personal-value{justify-self:end!important;text-align:right!important;min-width:0!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important;color:#888!important;font-size:12px!important}
+.wx .wx-personal-chevron{justify-self:end!important;color:#aaa!important;font-size:18px!important}
+.wx .wx-personal-avatar{display:block!important;width:39px!important;height:39px!important;overflow:hidden!important;border-radius:5px!important}
+.wx .wx-personal-avatar img{width:100%!important;height:100%!important;object-fit:cover!important}
+.wx .wx-pat-notice{align-self:center!important;text-align:center!important;margin:8px auto!important;padding:4px 11px!important;border-radius:12px!important;background:#d5d5d5!important;color:#666!important;font-size:11px!important;max-width:90%!important}
