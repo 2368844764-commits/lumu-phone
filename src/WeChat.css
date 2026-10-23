@@ -225,3 +225,29 @@
 .wx .wx-tabs{height:51px!important;min-height:51px!important;flex-basis:51px!important;padding:4px 0 2px!important}
 .wx .wx-tabs button{gap:2px!important}
 .wx .wx-tabs small{font-size:10px!important}
+
+/* V1.2 visual alignment to the supplied real WeChat reference: all four tabs. */
+.wx{height:100%!important;min-height:0!important;display:flex!important;flex-direction:column!important;overflow:hidden!important;background:#ededed!important}
+.wx .wx-top{flex:0 0 45px!important;height:45px!important;min-height:45px!important;max-height:45px!important;padding:0 14px!important;margin:0!important;display:flex!important;align-items:center!important;justify-content:center!important;background:#ededed!important;border-bottom:1px solid #dedede!important}
+.wx .wx-top h1{font-size:17px!important;line-height:45px!important;font-weight:600!important;margin:0!important}
+.wx .wx-top .wx-top-actions{height:45px!important;right:12px!important;top:0!important;bottom:auto!important;gap:16px!important;display:flex!important;align-items:center!important}
+.wx .wx-top .wx-top-actions button{width:28px!important;height:35px!important}
+.wx .wx-list{flex:1 1 0!important;min-height:0!important;overflow-y:auto!important;overscroll-behavior:contain!important;margin:0!important;padding:0!important}
+.wx .wx-tabs{flex:0 0 55px!important;height:55px!important;min-height:55px!important;padding:4px 0 2px!important;background:#fafafa!important;border-top:1px solid #dedede!important}
+.wx .wx-tabs button{flex:1!important;min-width:0!important;gap:2px!important}
+.wx .wx-tabs small{font-size:10px!important}
+.wx .wx-contact-shortcuts button{min-height:53px!important;height:53px!important;padding:5px 15px!important;gap:12px!important;font-size:14px!important}
+.wx .wx-shortcut-icon{width:39px!important;height:39px!important;flex:0 0 39px!important;font-size:20px!important}
+.wx .wx-person{min-height:61px!important;padding:7px 13px!important;gap:11px!important}
+.wx .wx-person .wx-avatar{width:43px!important;height:43px!important;flex:0 0 43px!important}
+.wx .wx-person-body strong,.wx .wx-person>strong{font-size:14px!important}
+.wx .wx-letter{padding:4px 12px!important;font-size:11px!important}
+.wx .wx-alphabet{display:flex!important;position:absolute!important;float:none!important;right:2px!important;top:50%!important;bottom:auto!important;transform:translateY(-50%)!important;width:16px!important;height:auto!important;max-height:90%!important;margin:0!important;padding:0!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;z-index:5!important;pointer-events:auto!important}
+.wx .wx-alphabet button{font-size:9px!important;line-height:1.12!important;padding:0!important;min-height:0!important}
+.wx .wx-discover-list,.wx .wx-me-list{background:#ededed!important}
+.wx .wx-discover-list .wx-discover-row,.wx .wx-me-list .wx-me-row{min-height:49px!important;height:49px!important;padding:0 15px!important;font-size:14px!important}
+.wx .wx-discover-list .wx-discover-group-1,.wx .wx-discover-list .wx-discover-group-3,.wx .wx-discover-list .wx-discover-group-5,.wx .wx-discover-list .wx-discover-group-7,.wx .wx-discover-list .wx-discover-group-8{margin-top:9px!important}
+.wx .wx-me-list .wx-me{height:126px!important;min-height:126px!important;margin:0 0 10px!important;padding:15px!important;background:#fff!important;display:flex!important;align-items:center!important;gap:15px!important}
+.wx .wx-me-list .wx-me .wx-avatar{width:61px!important;height:61px!important;flex:0 0 61px!important}
+.wx .wx-me-list .wx-me b{font-size:19px!important}
+.wx .wx-me-list .wx-me small{font-size:12px!important}
