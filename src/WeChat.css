@@ -185,3 +185,19 @@
 .wx .wx-discover-list .wx-discover-row{width:100%;flex-shrink:0}
 .wx .wx-me-list .wx-me-row{width:100%;flex-shrink:0}
 .wx .wx-top-actions{position:absolute;top:0;bottom:0;right:13px;display:flex;align-items:center}
+
+/* Reset conflicting historical overrides: native-density WeChat header and list */
+.wx{flex:1 1 auto!important;min-height:0!important;height:100%!important;background:#ededed!important}
+.wx .wx-top{height:48px!important;min-height:48px!important;flex:0 0 48px!important;padding:0 14px!important;position:relative!important;justify-content:center!important;background:#ededed!important}
+.wx .wx-top h1{font-size:17px!important;font-weight:600!important;margin:0!important}
+.wx .wx-top .wx-top-actions{position:absolute!important;top:0!important;bottom:0!important;right:12px!important;transform:none!important;display:flex!important;gap:13px!important;align-items:center!important}
+.wx .wx-top .wx-top-actions button{width:29px!important;height:36px!important;padding:2px!important;display:grid!important;place-items:center!important}
+.wx .wx-list{flex:1 1 auto!important;min-height:0!important;overflow-y:auto!important;overflow-x:hidden!important}
+.wx .wx-tabs{flex:0 0 56px!important;height:56px!important;min-height:56px!important;padding:4px 0!important}
+.wx .wx-person{min-height:65px!important;padding:8px 14px!important;gap:11px!important}
+.wx .wx-person .wx-avatar{width:45px!important;height:45px!important;flex:0 0 45px!important}
+.wx .wx-person-body{min-width:0!important}
+.wx .wx-person-body strong{font-size:15px!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+.wx .wx-person-body small{font-size:12px!important}
+.wx .wx-person time{font-size:10px!important}
+.wx .wx-discover-list .wx-discover-row,.wx .wx-me-list .wx-me-row{height:52px!important;min-height:52px!important;padding:0 15px!important;font-size:15px!important}
