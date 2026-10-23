@@ -3,7 +3,7 @@
 const BASE='https://gxgfjwqdffehakciokkk.supabase.co',KEY='sb_publishable_u1S0hNnTeoG26DvxrtUbvQ_-NekcL-v',SESSION='lumu-admin-auth-v1';
 const appCatalog=[['wechat','微信',true],['qq','QQ',false],['identityv','第五人格',false],['douyin','抖音',false],['weibo','微博',false],['tfamily','T-FAMILY',false],['taobao','淘宝',false],['photos','照片',true],['notes','备忘录',true],['messages','信息',true],['calendar','日历',true],['music','音乐',true],['browser','Safari',true],['settings','设置',true],['clock','时钟',true],['mail','邮件',true]];
 let token='',revision=0,draft={},published={},section='apps',personId='owner',sub='profile',dirty=false;
-const $=x=>document.getElementById(x),esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;':'&quot;',"'":'&#39;'}[c])),clone=o=>JSON.parse(JSON.stringify(o||{}));
+const $=x=>document.getElementById(x),esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),clone=o=>JSON.parse(JSON.stringify(o||{}));
 const id=()=>crypto.randomUUID?.()||'p-'+Date.now()+Math.random().toString(36).slice(2);
 const wx=()=>{draft.appManager??={};draft.appManager.wechat??={};return draft.appManager.wechat};
 const people=()=>wx().contacts??=[];
