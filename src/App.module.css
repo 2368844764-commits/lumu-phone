@@ -277,3 +277,10 @@
 .phone:has(.home) .grid .appTile{gap:5px!important}
 .phone:has(.home) .grid .appTile .icon{width:clamp(48px,14vw,62px)!important;height:clamp(48px,14vw,62px)!important}
 @media(max-height:690px){.phone:has(.home) .grid{grid-template-rows:repeat(4,78px)!important;grid-auto-rows:78px!important;row-gap:8px!important;padding-top:8px!important}.phone:has(.home) .grid .appTile .icon{width:46px!important;height:46px!important}}
+
+/* WeChat app viewport: explicit CSS-module classes avoid fragile :has(:global(...)).
+   The status bar occupies exactly 44px; WeChat begins immediately below it. */
+.wechatAppPage{position:absolute!important;top:44px!important;right:0!important;bottom:12px!important;left:0!important;inset:44px 0 12px!important;padding:0!important;margin:0!important;min-height:0!important;border:0!important;border-radius:0!important;background:#ededed!important;display:flex!important;flex-direction:column!important;overflow:hidden!important}
+.wechatAppPage>.nav{display:none!important}
+.wechatAppBody{position:relative!important;inset:auto!important;flex:1 1 0!important;min-height:0!important;width:100%!important;height:100%!important;margin:0!important;padding:0!important;display:flex!important;flex-direction:column!important;overflow:hidden!important;background:#ededed!important}
+.wechatAppBody>:global(.wx){position:relative!important;inset:auto!important;flex:1 1 0!important;min-height:0!important;width:100%!important;height:100%!important;margin:0!important;padding:0!important;display:flex!important;flex-direction:column!important}
