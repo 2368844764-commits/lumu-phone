@@ -107,3 +107,20 @@
 .wx-profile-links span{float:right;color:#bbb}
 .wx-profile-actions{background:#fff}
 .wx-profile-actions button{margin:0;background:#fff;color:#566f96;border-radius:0;border-bottom:1px solid #eee;padding:18px;font-size:17px;font-weight:500}
+
+/* Chat info: one continuous page, matching the provided WeChat screenshot */
+.wx-chat-info-page{flex:1;min-height:0;overflow-y:auto;background:#ededed;padding-bottom:18px}
+.wx-chat-info-page .wx-chat-participants{background:#fff;display:flex;gap:20px;min-height:125px;box-sizing:border-box;padding:20px 16px 15px;margin:0 0 9px;align-items:flex-start}
+.wx-chat-info-page .wx-participant{display:flex;align-items:center;flex-direction:column;gap:7px;width:60px;max-width:60px;padding:0;background:none;border:0}
+.wx-chat-info-page .wx-participant .wx-avatar,.wx-chat-info-page .wx-add-participant{height:55px;width:55px;border-radius:7px}
+.wx-chat-info-page .wx-participant small{font-size:11px;color:#9c9c9c;max-width:60px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wx-chat-info-page .wx-add-participant{display:grid;place-items:center;border:1.5px dashed #bbb;font-size:34px;color:#aaa;font-weight:200}
+.wx-chat-info-group{background:#fff;margin-bottom:9px}
+.wx-chat-info-group>button,.wx-chat-info-group>.wx-chat-wallpaper-option{width:100%;box-sizing:border-box;min-height:56px;padding:0 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;text-align:left;font-size:16px;color:#191919;background:#fff;border:0;border-bottom:1px solid #ededed;border-radius:0;position:relative}
+.wx-chat-info-group>button:last-child{border-bottom:0}
+.wx-chat-info-group .wx-row-arrow{color:#b7b7b7;font-size:28px;line-height:1;font-weight:300}
+.wx-chat-info-group .wx-switch{display:inline-block;position:relative;flex:0 0 48px;width:48px;height:28px;border-radius:18px;background:#dedede;transition:background .15s}
+.wx-chat-info-group .wx-switch.on{background:#07c160}
+.wx-chat-info-group .wx-switch:before{content:'';position:absolute;top:2px;left:2px;width:24px;height:24px;background:#fff;border-radius:50%;box-shadow:0 1px 3px #0002;transition:transform .15s}
+.wx-chat-info-group .wx-switch.on:before{transform:translateX(20px)}
+.wx-chat-info-group .wx-chat-wallpaper-option input[type=file]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
