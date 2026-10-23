@@ -79,3 +79,11 @@
 .home .widgetShelf{margin:0 0 8px;max-height:112px}
 .home .widgetShelf + .grid{grid-template-rows:repeat(4,minmax(0,1fr))}
 @media(max-height:700px){.home .grid{gap:0 7px}.home .icon{width:min(13.5vw,52px);height:min(13.5vw,52px)}.home .appTile{font-size:10px;gap:3px}.home .dock{height:74px}.home .spotlight{margin-bottom:7px}}
+
+/* Four native-looking iOS dock icons; all other app icons remain untouched. */
+.home .dock .dockIcon{border-radius:22%;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 2px 6px #0002}
+.home .dock .dockIcon>span{width:100%;height:100%;display:flex!important;align-items:center;justify-content:center}
+.home .dock .dock_browser{background:linear-gradient(145deg,#fff,#e7eff8)!important}
+.home .dock .dock_camera{background:linear-gradient(145deg,#e5e8ec,#939ca7)!important}
+.home .dock .dock_phone{background:linear-gradient(145deg,#51f477,#00b834)!important}
+.home .dock .dock_messages{background:linear-gradient(145deg,#52f779,#00c63c)!important}
