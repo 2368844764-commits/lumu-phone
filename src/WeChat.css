@@ -177,3 +177,11 @@
 .wx .wx-me-list .wx-me b{font-size:20px}
 .wx .wx-me-list .wx-me small{font-size:13px;margin-top:7px}
 .wx .wx-me-list .wx-me-row-1,.wx .wx-me-list .wx-me-row-6{margin-top:9px}
+
+/* Compact contact index sits inside the phone viewport */
+.wx .wx-list:has(.wx-contact-shortcuts){padding-right:19px}
+.wx .wx-list .wx-alphabet{position:sticky;display:flex;float:right;right:0;top:0;bottom:auto;width:18px;height:auto;max-height:100%;margin-top:-100%;padding:3px 0;z-index:2;flex-direction:column;align-items:center;justify-content:center;background:transparent;overflow:hidden}
+.wx .wx-alphabet button{display:block;flex:0 0 auto;width:18px;min-height:13px;height:13px;padding:0;text-align:center;font-size:9px;line-height:13px;color:#666}
+.wx .wx-discover-list .wx-discover-row{width:100%;flex-shrink:0}
+.wx .wx-me-list .wx-me-row{width:100%;flex-shrink:0}
+.wx .wx-top-actions{position:absolute;top:0;bottom:0;right:13px;display:flex;align-items:center}
