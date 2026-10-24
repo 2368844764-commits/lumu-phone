@@ -549,3 +549,8 @@
 .wx .wx-personal-list .wx-personal-chevron{font-size:0!important;line-height:1!important;overflow:hidden!important;width:12px!important;white-space:nowrap!important}
 .wx .wx-personal-list .wx-personal-chevron::after{content:'›';font-size:18px!important;color:#aaa!important}
 .wx .wx-personal-list .wx-personal-value{min-width:0!important;max-width:50vw!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+
+/* Remove faint avatar frame / corner halo without changing list sizing */
+.wx-avatar{border:0!important;box-shadow:none!important;background:transparent;overflow:hidden}
+.wx-avatar img{display:block;width:100%;height:100%;object-fit:cover;border:0!important;border-radius:inherit!important}
+.wx-pat-notice{position:relative;flex-shrink:0}
