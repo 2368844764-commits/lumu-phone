@@ -284,3 +284,16 @@
 .wechatAppPage>.nav{display:none!important}
 .wechatAppBody{position:relative!important;inset:auto!important;flex:1 1 0!important;min-height:0!important;width:100%!important;height:100%!important;margin:0!important;padding:0!important;display:flex!important;flex-direction:column!important;overflow:hidden!important;background:#ededed!important}
 .wechatAppBody>:global(.wx){position:relative!important;inset:auto!important;flex:1 1 0!important;min-height:0!important;width:100%!important;height:100%!important;margin:0!important;padding:0!important;display:flex!important;flex-direction:column!important}
+
+
+/* Home widgets: compact iOS glass cards; dock styles remain unchanged. */
+.home .widgetShelf{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:3px 2px 9px;flex-shrink:0}
+.weatherWidget,.memoWidget{min-width:0;height:139px;border:1px solid #ffffff70;border-radius:23px;padding:12px 13px;display:flex;flex-direction:column;align-items:flex-start;text-align:left;overflow:hidden;backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);box-shadow:0 6px 18px #182c5125}
+.weatherWidget{background:linear-gradient(150deg,#64a9edc9,#567bd6aa);color:white}
+.memoWidget{background:#fffdf2d9;color:#37332e}
+.widgetTop{display:flex;justify-content:space-between;align-items:center;width:100%;font-size:11px;font-weight:650;opacity:.9}
+.weatherWidget strong{font-size:39px;line-height:1.08;font-weight:400;margin-top:7px}
+.memoWidget strong{font-size:18px;margin-top:17px}
+.weatherWidget>span,.memoWidget>span{font-size:12px;margin-top:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
+.weatherWidget small,.memoWidget small{font-size:10px;margin-top:auto;opacity:.85;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+@media(max-height:700px){.weatherWidget,.memoWidget{height:113px;padding:9px 11px}.weatherWidget strong{font-size:31px}.memoWidget strong{margin-top:9px;font-size:16px}.home .widgetShelf{margin-bottom:3px}}
