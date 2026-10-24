@@ -1,0 +1,35 @@
+name: Validate WeChat feature branch
+on:
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'public/studio.html'
+      - 'package.json'
+      - 'tsconfig.json'
+      - '.github/workflows/pr-build.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  typecheck-and-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Typecheck and build
+        run: npm run build
+      - name: Check Studio inline JavaScript syntax
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const html = fs.readFileSync('public/studio.html', 'utf8');
+          const scripts = [...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)];
+          if (!scripts.length) throw Error('Studio script not found');
+          for (const match of scripts) new Function(match[1]);
+          console.log('Studio JavaScript parsed successfully');
+          NODE

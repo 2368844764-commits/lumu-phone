@@ -500,3 +500,44 @@
 .wx .wx-personal-avatar{display:block!important;width:39px!important;height:39px!important;overflow:hidden!important;border-radius:5px!important}
 .wx .wx-personal-avatar img{width:100%!important;height:100%!important;object-fit:cover!important}
 .wx .wx-pat-notice{align-self:center!important;text-align:center!important;margin:8px auto!important;padding:4px 11px!important;border-radius:12px!important;background:#d5d5d5!important;color:#666!important;font-size:11px!important;max-width:90%!important}
+
+
+/* V1.4 simulated WeChat video call — scoped to the video overlay. */
+.wx-video-call{position:absolute;inset:0;z-index:20;background:#101419;color:#fff;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+.wx-video-main{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#080b10}
+.wx-video-shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(#0009,transparent 28%,transparent 55%,#000c)}
+.wx-video-top{position:absolute;top:16px;left:0;right:0;display:flex;align-items:center;flex-direction:column;gap:5px;text-shadow:0 1px 8px #0008;font-size:15px}
+.wx-video-top span{font-size:13px;color:#eee}
+.wx-video-empty{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:linear-gradient(150deg,#293b48,#0e141b)}
+.wx-video-avatar{width:96px;height:96px;border-radius:50%;background:#617c8e;display:grid;place-items:center;font-size:36px;overflow:hidden;box-shadow:0 8px 30px #0004;animation:wx-video-breathe 2.8s ease-in-out infinite}
+.wx-video-avatar-image{width:100%;height:100%;object-fit:cover}
+@keyframes wx-video-breathe{50%{transform:scale(1.045)}}
+.wx-video-self{position:absolute;right:16px;top:83px;width:105px;height:154px;border-radius:13px;overflow:hidden;background:#232b33;box-shadow:0 4px 18px #0009;touch-action:none;z-index:2;display:grid;place-items:center}
+.wx-video-self video{width:100%;height:100%;object-fit:cover}
+.wx-video-self-off,.wx-video-self-avatar{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;font-size:11px;color:#ddd}
+.wx-video-self-avatar{font-size:26px}
+.wx-video-notes{position:absolute;left:15px;right:135px;bottom:172px;display:flex;flex-direction:column;gap:7px;pointer-events:none;z-index:3;font-size:12px;text-shadow:0 1px 5px #000}
+.wx-video-notes>div{background:#0004;border-radius:10px;padding:7px 9px;word-break:break-word}
+.wx-video-bottom{position:absolute;bottom:20px;left:0;right:0;padding:0 16px;z-index:3}
+.wx-video-controls{display:flex;justify-content:space-between;align-items:center;gap:5px;margin-bottom:20px}
+.wx .wx-video-controls button{background:#ffffff35;color:#fff;border-radius:50%;width:48px;height:48px;display:grid;place-items:center;flex:0 0 48px;padding:0}
+.wx .wx-video-controls .wx-video-end{background:#e64c51}
+.wx-video-controls svg{width:21px;height:21px}
+.wx-video-compose{display:flex;align-items:center;gap:9px;border:1px solid #ffffff40;border-radius:24px;background:#0006;padding:6px 8px 6px 15px}
+.wx-video-compose input{border:0;outline:0;background:transparent;color:#fff;min-width:0;flex:1;font-size:13px}
+.wx-video-compose input::placeholder{color:#fff9}
+.wx .wx-video-compose button{color:#fff;display:grid;place-items:center}
+.wx-video-incoming{display:flex;flex-direction:column;justify-content:space-between;padding:85px 25px 75px;background:linear-gradient(155deg,#394c5b,#0a0c11)}
+.wx-video-incoming-head{display:flex;align-items:center;flex-direction:column;gap:10px}
+.wx-video-incoming-head h2{font-size:24px;margin:14px 0 0}
+.wx-video-incoming-head p{font-size:14px;color:#e5e5e5}
+.wx-video-incoming-head small{color:#aaa}
+.wx-video-incoming-actions{display:flex;justify-content:space-around}
+.wx .wx-video-incoming-actions button{display:flex;align-items:center;flex-direction:column;gap:10px;color:white;font-size:13px}
+.wx-video-incoming-actions svg{width:57px;height:57px;background:#e64c51;padding:16px;border-radius:50%}
+.wx-video-incoming-actions .accept svg{background:#32ba69}
+.wx-personal-editor{padding:24px 18px;display:flex;flex-direction:column;gap:14px;background:#ededed;flex:1}
+.wx-personal-editor input:not([type=file]){background:#fff;border:0;border-radius:9px;padding:14px;font-size:14px;color:#222}
+.wx-personal-editor label{font-size:13px;display:flex;flex-direction:column;gap:12px}
+.wx-personal-editor small{font-size:12px;color:#999;line-height:1.6}
+@media(max-width:355px){.wx .wx-video-controls button{width:43px;height:43px;flex-basis:43px}.wx-video-self{width:90px;height:135px}.wx-video-notes{right:110px}}
