@@ -541,3 +541,11 @@
 .wx-personal-editor label{font-size:13px;display:flex;flex-direction:column;gap:12px}
 .wx-personal-editor small{font-size:12px;color:#999;line-height:1.6}
 @media(max-width:355px){.wx .wx-video-controls button{width:43px;height:43px;flex-basis:43px}.wx-video-self{width:90px;height:135px}.wx-video-notes{right:110px}}
+
+
+/* Final player UI: no admin or editing hints in WeChat Me. */
+.wx .wx-me-status{display:none!important}
+.wx .wx-personal-list .wx-personal-row{grid-template-columns:minmax(70px,1fr) minmax(0,auto) 12px!important;column-gap:9px!important;align-items:center!important;padding-right:16px!important}
+.wx .wx-personal-list .wx-personal-chevron{font-size:0!important;line-height:1!important;overflow:hidden!important;width:12px!important;white-space:nowrap!important}
+.wx .wx-personal-list .wx-personal-chevron::after{content:'›';font-size:18px!important;color:#aaa!important}
+.wx .wx-personal-list .wx-personal-value{min-width:0!important;max-width:50vw!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
